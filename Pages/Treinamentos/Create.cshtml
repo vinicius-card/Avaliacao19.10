@@ -1,0 +1,39 @@
+﻿@page
+@model Avaliação19._10.Pages.Treinamentos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Treinamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Treinamento.Categoria" class="control-label"></label>
+                <input asp-for="Treinamento.Categoria" class="form-control" />
+                <span asp-validation-for="Treinamento.Categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Treinamento.Valor" class="control-label"></label>
+                <input asp-for="Treinamento.Valor" class="form-control" />
+                <span asp-validation-for="Treinamento.Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

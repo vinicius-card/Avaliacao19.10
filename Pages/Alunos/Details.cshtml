@@ -1,0 +1,49 @@
+﻿@page
+@model Avaliação19._10.Pages.Alunos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Treinamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Treinamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Mensalidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Mensalidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.dtMatricula)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.dtMatricula)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Aluno.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
